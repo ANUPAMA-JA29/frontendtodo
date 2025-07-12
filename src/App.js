@@ -102,7 +102,7 @@ function App() {
 
   // Main app UI for authenticated users
   const MainApp = () => (
-    <div className="min-h-screen bg-orange-50 flex flex-col">
+  /*  <div className="min-h-screen bg-orange-50 flex flex-col">
       <nav className="bg-orange-500 text-white px-6 py-4 flex justify-between items-center shadow-md">
         <ul className="flex space-x-4">
           <li>
@@ -120,7 +120,7 @@ function App() {
         >
           Logout
         </button>
-      </nav>
+      </nav> */
       <main className="flex-1 p-8">
         <h1 className="text-4xl font-extrabold text-center mb-8 text-orange-600 drop-shadow">
           MERN To-Do App
