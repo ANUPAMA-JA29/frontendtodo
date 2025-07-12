@@ -5,8 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-//import Login from "./Login";
-//import Signup from "./Signup";
+import Login from "./Login";
+import Signup from "./Signup";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -31,11 +31,11 @@ function App() {
     if (token) fetchTasks(token);
   }, [token]);
 
- // const logout = () => {
-   // setToken("");
-  //  localStorage.removeItem("token");
-   // setTasks([]);
-//  };
+  const logout = () => {
+    setToken("");
+    localStorage.removeItem("token");
+    setTasks([]);
+  };
 
   const addTask = async (text) => {
     const response = await fetch(
@@ -102,7 +102,7 @@ function App() {
 
   // Main app UI for authenticated users
   const MainApp = () => (
-  /*  <div className="min-h-screen bg-orange-50 flex flex-col">
+    <div className="min-h-screen bg-orange-50 flex flex-col">
       <nav className="bg-orange-500 text-white px-6 py-4 flex justify-between items-center shadow-md">
         <ul className="flex space-x-4">
           <li>
@@ -120,7 +120,7 @@ function App() {
         >
           Logout
         </button>
-      </nav> */
+      </nav> 
       <main className="flex-1 p-8">
         <h1 className="text-4xl font-extrabold text-center mb-8 text-orange-600 drop-shadow">
           MERN To-Do App
