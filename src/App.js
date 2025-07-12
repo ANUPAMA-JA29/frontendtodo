@@ -5,8 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Login from "./Login";
-import Signup from "./Signup";
+//import Login from "./Login";
+//import Signup from "./Signup";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
@@ -31,11 +31,11 @@ function App() {
     if (token) fetchTasks(token);
   }, [token]);
 
-  const logout = () => {
-    setToken("");
-    localStorage.removeItem("token");
-    setTasks([]);
-  };
+ // const logout = () => {
+   // setToken("");
+  //  localStorage.removeItem("token");
+   // setTasks([]);
+//  };
 
   const addTask = async (text) => {
     const response = await fetch(
